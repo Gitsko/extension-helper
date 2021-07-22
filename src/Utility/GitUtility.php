@@ -61,7 +61,7 @@ class GitUtility
      */
     public static function commit(string $message)
     {
-        ShellUtility::exec('git commit -m "' . $message . '"');
+        ShellUtility::exec('git commit -nm "' . $message . '"');
     }
 
     /**
