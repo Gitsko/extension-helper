@@ -74,6 +74,8 @@ class GitUtility
             throw new \InvalidArgumentException('The tag "' . $tag . '" already exists');
         }
         ShellUtility::exec('git tag ' . $tag);
+        ShellUtility::exec('git push');
+        ShellUtility::exec('git push --tags');
     }
 
     /**
